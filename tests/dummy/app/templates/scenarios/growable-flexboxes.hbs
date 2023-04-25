@@ -1,0 +1,30 @@
+<div id="growable-flexboxes-scenario">
+  <p>This demonstrates a way to combine animation and CSS3's flexible
+  box model. It uses the <code>containerless</code> flag to tell
+  liquid-fire not to try managing the container for the elements, so
+  that we can instead contain them direcltly in a div with
+  `display:flex`.</p>
+  {{!- BEGIN-SNIPPET flexboxes -}}
+  <div>
+    Choose some of these:
+    <label><Input @type="checkbox" @checked={{this.showOne}} />One</label>
+    <label><Input @type="checkbox" @checked={{this.showTwo}} />Two</label>
+    <label><Input @type="checkbox" @checked={{this.showThree}} />Three</label>
+  </div>
+
+  <div class="flex-parent">
+    {{#liquid-if this.showOne use="flex-grow" containerless=true }}
+      One
+    {{/liquid-if}}
+
+    {{#liquid-if this.showTwo use="flex-grow" containerless=true }}
+      Two
+    {{/liquid-if}}
+
+    {{#liquid-if this.showThree use="flex-grow" containerless=true }}
+      Three
+    {{/liquid-if}}
+  </div>
+  {{!- END-SNIPPET}}
+  <CodeSnippet @name="flexboxes.hbs" />
+</div>

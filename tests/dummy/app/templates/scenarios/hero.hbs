@@ -1,0 +1,23 @@
+<button type="button" {{action "toggle"}}>Toggle</button>
+
+{{#liquid-if this.showFirst class="hero-scenario"}}
+  <div class="index">
+    <div class="bluebox"></div>
+    <div class="blue-abs-box"></div>
+  </div>
+{{else}}
+  <div class="second">
+    <div class="redbox"></div>
+    <div class="red-abs-box"></div>
+  </div>
+{{/liquid-if}}
+
+
+<button type="button" {{action "toggleSort"}}>Toggle Sort</button>
+<button type="button" {{action "restoreModels"}}>Reset</button>
+
+{{#liquid-bind this.sortedModels class="hero-sort" as |currentModels|}}
+  {{#each currentModels key="id" as |model|}}
+    <button data-model-id={{model.id}} type="button" {{action "deleteModel" model}}>{{model.firstName}} {{model.lastName}}</button>
+  {{/each}}
+{{/liquid-bind}}

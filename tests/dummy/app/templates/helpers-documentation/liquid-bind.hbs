@@ -1,0 +1,51 @@
+{{!-- template-lint-disable no-unbalanced-curlies --}}
+
+<h2>
+  \{{liquid-bind}}
+</h2>
+
+<p>
+  Renders a bound value into your template, and uses the transition
+map to decide how to animate when the bound value changes.
+</p>
+
+<p>
+  Saying
+  <code>
+    \{{liquid-bind someValue}}
+  </code>
+  is a drop-in
+replacement for
+  <code>
+    \{{someValue}}
+  </code>
+  , except this wraps the
+content in markup so that it can be targeted for animation. See the
+  <LinkTo @route="helpers-documentation.index">
+    Common Behavior and
+Options
+  </LinkTo>
+  that apply to all liquid-fire helpers.
+</p>
+
+<p>
+  There is also a block form of
+  <code>
+    \{{#liquid-bind}}
+  </code>
+  that
+is
+  <LinkTo @route="helpers-documentation.liquid-bind-block">
+    demonstrated on
+the next page
+  </LinkTo>
+  .
+</p>
+
+<LiquidBindDemo />
+
+<CodeSnippet @name="liquid-bind-demo.hbs" />
+
+<CodeSnippet @name="bind-demo-transition.js" />
+
+<CodeSnippet @name="bind-demo-style.css" />
