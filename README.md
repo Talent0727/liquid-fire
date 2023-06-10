@@ -16,7 +16,6 @@ Comprehensive animation support for ambitious Ember applications. [Interactive D
 
 - Backed by velocity.js, but easy to extend to other animation drivers
   if there's interest.
-
 ## Documentation
 
 [Liquid Fire website](http://ember-animation.github.io/liquid-fire) is an ember-cli application that contains an
