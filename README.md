@@ -4,9 +4,6 @@ Comprehensive animation support for ambitious Ember applications. [Interactive D
 
 ## Features
 
-- Animated transitions between routes that work seamlessly with the
-  Ember router.
-
 - A DSL for laying out your spatial route relationships, cleanly
   separated from view-layer implementation details.
 
